@@ -27,6 +27,26 @@
       .policy li {
         max-width: 65ch;
       }
+      .table-wrap {
+        overflow-x: auto;
+        margin: 1rem 0;
+      }
+      .policy table {
+        width: 100%;
+        min-width: 560px;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+      }
+      .policy th,
+      .policy td {
+        padding: 0.6rem 0.75rem;
+        border: 2px solid var(--ink);
+        text-align: left;
+        vertical-align: top;
+      }
+      .policy th {
+        background: rgba(36, 36, 42, 0.08);
+      }
       .policy .updated {
         opacity: 0.7;
       }
@@ -58,10 +78,12 @@
         <ul>
           <li><a href="#collect">Data we collect</a></li>
           <li><a href="#use">How we use data</a></li>
+          <li><a href="#advertising">Advertising measurement</a></li>
           <li><a href="#share">Who we share data with</a></li>
           <li><a href="#transfers">International transfers</a></li>
           <li><a href="#retention">Retention</a></li>
           <li><a href="#choices">Your choices and rights</a></li>
+          <li><a href="#us-rights">Your US state privacy rights</a></li>
           <li><a href="#deletion">Deleting your account</a></li>
           <li><a href="#children">Children</a></li>
           <li><a href="#security">Security</a></li>
@@ -97,9 +119,14 @@
           performance information.
         </li>
         <li>
-          <strong>Identifiers:</strong> device and advertising identifiers
-          provided by your operating system, and identifiers we generate for
-          your install or account.
+          <strong>Device and advertising identifiers.</strong> These include an
+          app-install ID, a device ID, and, where your settings allow, your
+          device’s advertising identifier: Apple’s IDFA or Google’s Advertising
+          ID. On iOS we read the IDFA only if you allow tracking in Apple’s App
+          Tracking Transparency prompt. We use these identifiers to run the
+          Games, prevent fraud, and measure which ads led to an install. See
+          <a href="#advertising"><strong>Advertising measurement and
+          attribution</strong></a> below.
         </li>
         <li>
           <strong>Purchase data:</strong> what you bought, when, and the
@@ -118,67 +145,82 @@
       </p>
 
       <h2 id="use">How we use data</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Purpose</th><th>Legal basis (EEA, UK, Switzerland)</th></tr></thead>
+          <tbody>
+            <tr><td>Providing the Games: accounts, saves, matchmaking, leagues, leaderboards</td><td>Contract</td></tr>
+            <tr><td>Processing purchases and preventing fraud</td><td>Contract; legitimate interests (preventing fraud and abuse)</td></tr>
+            <tr><td>Analytics and improving the Games</td><td>Legitimate interests (understanding how the Games are played). We use consent where the law requires it to read data from your device.</td></tr>
+            <tr><td>Advertising measurement and attribution</td><td>Consent. You can withdraw it at any time in Settings &gt; Privacy.</td></tr>
+            <tr><td>Support</td><td>Contract; legitimate interests</td></tr>
+            <tr><td>Service communications: account, security, and policy notices</td><td>Contract; legal obligation where a notice is required by law</td></tr>
+            <tr><td>Push notifications (if offered)</td><td>Consent through your device’s notification permission</td></tr>
+            <tr><td>Security and legal compliance</td><td>Legitimate interests; legal obligation</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="advertising">Advertising measurement and attribution</h2>
+      <p>
+        We advertise the Games on platforms such as Meta (Facebook and
+        Instagram) and TikTok. To learn which ads lead people to install and
+        play, we use Singular, a mobile measurement partner.
+      </p>
+      <p>
+        When you install and open a Game, the Singular SDK collects device and
+        technical data. This includes your IP address, device model, OS version,
+        app-install ID, and, where you allow it, your advertising identifier.
+        Singular matches this to ad clicks or views to work out which campaign,
+        if any, led to your install. We and Singular then send a limited set of
+        in-game events, such as install, tutorial complete, and purchase, back to
+        the ad platform that ran the campaign. The platform uses them to measure
+        and optimize our campaigns.
+      </p>
+      <p>
+        We do not show third-party ads in the Games, and we do not sell your
+        data for money. However, some US state laws treat sending identifiers
+        and events to ad platforms for this purpose as <strong>“sharing”</strong>
+        for <strong>“cross-context behavioral advertising”</strong> or
+        <strong>“targeted advertising.”</strong> You can opt out of this (see
+        below and <a href="#us-rights"><strong>Your US state privacy
+        rights</strong></a>).
+      </p>
+      <p><strong>Your controls</strong></p>
       <ul>
-        <li>
-          <strong>Provide the Games:</strong> create and secure your account,
-          save progress, restore purchases, and deliver in-game items. (Legal
-          basis under GDPR: performing our contract with you.)
-        </li>
-        <li>
-          <strong>Process purchases</strong> and prevent fraud or abuse. (Contract;
-          legitimate interests.)
-        </li>
-        <li>
-          <strong>Analytics and improvement:</strong> understand how the Games
-          are used, fix bugs, balance gameplay, and develop new features.
-          (Legitimate interests, or consent where required.)
-        </li>
-        <li>
-          <strong>Support:</strong> respond to your questions and requests.
-          (Contract; legitimate interests.)
-        </li>
-        <li>
-          <strong>Security and legal compliance:</strong> detect cheating and
-          fraud, enforce our terms, and meet legal obligations. (Legitimate
-          interests; legal obligation.)
-        </li>
-        <li>
-          <strong>Service communications:</strong> important notices about your
-          account or the Games.
-        </li>
+        <li><strong>iOS:</strong> We ask for permission through Apple’s App Tracking Transparency prompt before reading your IDFA. If you decline, attribution on iOS uses Apple’s privacy-preserving SKAdNetwork / AdAttributionKit, and no advertising identifier is used. You can change this at any time in Settings &gt; Privacy &amp; Security &gt; Tracking.</li>
+        <li><strong>Android:</strong> You can delete or reset your Advertising ID in Settings &gt; Google &gt; Ads (or Settings &gt; Privacy &gt; Ads on some devices).</li>
+        <li><strong>In the Games:</strong> Turn off <strong>Settings &gt; Privacy &gt; Share data for ad measurement</strong>. This stops us and Singular from sending your events to ad platforms, and applies on every device where you sign in.</li>
+        <li><strong>EEA, UK, and Switzerland:</strong> We ask for your consent before we read your advertising identifier or turn on attribution. If you don’t consent, no attribution data is collected about you. You can withdraw consent at any time in <strong>Settings &gt; Privacy</strong>.</li>
       </ul>
       <p>
-        We do not sell your personal data, and we do not use it to show
-        third-party advertising or to build advertising profiles.
+        Singular’s privacy policy:
+        <a href="https://www.singular.net/privacy-policy/">singular.net/privacy-policy</a>.
+        Meta: <a href="https://www.facebook.com/privacy/policy">facebook.com/privacy/policy</a>.
+        TikTok: <a href="https://www.tiktok.com/legal/privacy-policy">tiktok.com/legal/privacy-policy</a>.
       </p>
 
       <h2 id="share">Who we share data with</h2>
-      <ul>
-        <li>
-          <strong>Service providers</strong> that process data on our behalf,
-          such as cloud hosting, account authentication, analytics, crash
-          reporting, and customer support tools. They may use the data only to
-          provide services to us.
-        </li>
-        <li>
-          <strong>Platform providers</strong> such as Apple and Google, which
-          operate the app stores, process payments, and handle sign-in if you
-          choose it. Their own privacy policies apply to their processing.
-        </li>
-        <li>
-          <strong>Legal and safety:</strong> authorities or other parties when
-          required by law or to protect rights, safety, and the integrity of the
-          Games.
-        </li>
-        <li>
-          <strong>Business transfers:</strong> a successor, if we are involved in
-          a merger, acquisition, or sale of assets.
-        </li>
-      </ul>
       <p>
-        Other players may see your display name and in-game activity if the
-        Games include social or multiplayer features.
+        We share personal data only with the recipients below, and only for the
+        purposes listed. Service providers process data on our behalf under
+        contract and may not use it for their own purposes.
       </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Recipient</th><th>Role</th><th>What they receive</th><th>Why</th></tr></thead>
+          <tbody>
+            <tr><td>Talo</td><td>Service provider</td><td>Account ID, display name, gameplay progress, saves, stats, leaderboard entries, events</td><td>Game backend: saves, leaderboards, live config, analytics</td></tr>
+            <tr><td>Singular</td><td>Service provider</td><td>Device and technical data, IP address, advertising ID (if allowed), in-game events</td><td>Ad attribution and fraud prevention</td></tr>
+            <tr><td>Meta, TikTok</td><td>Third parties (ad platforms)</td><td>Advertising ID or matched click ID, install and in-game events</td><td>Measuring and optimizing our ad campaigns. This may count as “sharing” under US state law. You can opt out.</td></tr>
+            <tr><td>Apple, Google</td><td>Platform providers</td><td>Purchase and sign-in data, as processed by their stores</td><td>App distribution, payments, optional sign-in</td></tr>
+            <tr><td>Google (Firebase Crashlytics)</td><td>Service provider</td><td>Crash logs, device and technical data</td><td>Fixing bugs</td></tr>
+            <tr><td>GitHub (GitHub Pages)</td><td>Hosting provider</td><td>Website server logs (IP address, browser type)</td><td>Hosting goodluckmachine.com</td></tr>
+            <tr><td>Other players</td><td>Other users</td><td>Display name, leaderboard rank, league and match results</td><td>Social, league, and multiplayer features</td></tr>
+            <tr><td>Authorities, advisers, acquirers</td><td>As required</td><td>Only what’s needed</td><td>Legal compliance, protecting rights, or a merger or sale of the business</td></tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2 id="transfers">International transfers</h2>
       <p>
@@ -189,12 +231,25 @@
       </p>
 
       <h2 id="retention">Retention</h2>
+      <p>We keep personal data only as long as we need it for the purposes above:</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Data</th><th>How long we keep it</th></tr></thead>
+          <tbody>
+            <tr><td>Account, gameplay progress, saves</td><td>While your account is active. After a deletion request, deleted within 30 days, and from backups within 90 days.</td></tr>
+            <tr><td>Inactive accounts</td><td>Deleted after 24 months with no sign-in</td></tr>
+            <tr><td>Analytics events</td><td>25 months, then deleted or aggregated so they no longer identify you</td></tr>
+            <tr><td>Attribution data held by Singular</td><td>13 months</td></tr>
+            <tr><td>Crash logs</td><td>90 days</td></tr>
+            <tr><td>Support messages</td><td>24 months after the request is closed</td></tr>
+            <tr><td>Purchase records</td><td>7 years, to meet tax and accounting rules</td></tr>
+            <tr><td>Website server logs</td><td>Under GitHub’s retention. We don’t keep a copy.</td></tr>
+          </tbody>
+        </table>
+      </div>
       <p>
-        We keep account and gameplay data while your account is active and for a
-        limited time afterward as needed to provide the Games, resolve disputes,
-        and meet legal, tax, and accounting obligations. When you delete your
-        account, we delete or anonymize your personal data, except where we must
-        keep it by law (for example, purchase records).
+        We may keep data longer if we need it to resolve a dispute, enforce our
+        terms, or comply with a legal obligation.
       </p>
 
       <h2 id="choices">Your choices and rights</h2>
@@ -207,10 +262,8 @@
       </p>
       <ul>
         <li>
-          <strong>California and other US states:</strong> you may request to
-          know what personal data we collected, used, and disclosed, and to
-          delete or correct it. We do not sell personal data or share it for
-          cross-context behavioral advertising.
+          <strong>US states:</strong> see
+          <a href="#us-rights">Your US state privacy rights</a> below.
         </li>
         <li>
           <strong>EEA, UK, and Switzerland:</strong> our processing relies on the
@@ -229,6 +282,80 @@
         We may need to verify your identity first, and we will respond within the
         time required by applicable law.
       </p>
+      <p>
+        <strong>How to make a request.</strong> Email
+        support@goodluckmachine.com from the email address linked to your
+        account, or include your player ID (shown in
+        <strong>Settings &gt; Account</strong>). We use that to verify your
+        identity. We may ask for one more detail that only the account holder
+        would know, such as a recent purchase. If you play without an
+        email-linked account, we can verify you through a code shown in the
+        game. We don’t ask for ID documents.
+      </p>
+      <p>
+        <strong>Response times.</strong> We respond within one month in the EEA,
+        UK, and Switzerland, and within 45 days in the US. We may extend these by
+        the further period the law allows if a request is complex, and we’ll tell
+        you if we do.
+      </p>
+      <p>
+        <strong>Complaints.</strong> If you’re in the EEA, UK, or Switzerland,
+        you can complain to your local data protection authority. In the UK,
+        that’s the Information Commissioner’s Office
+        (<a href="https://ico.org.uk">ico.org.uk</a>).
+      </p>
+
+      <h2 id="us-rights">Your US state privacy rights</h2>
+      <p>
+        This section applies if you live in California, Colorado, Connecticut,
+        Virginia, Texas, Oregon, or another US state with a comprehensive
+        privacy law. It adds to the rest of this policy.
+      </p>
+      <p><strong>Personal information we collect, and who receives it</strong></p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Category (California law)</th><th>Examples</th><th>Source</th><th>Sold?</th><th>Shared for cross-context advertising?</th></tr></thead>
+          <tbody>
+            <tr><td>Identifiers</td><td>Account ID, display name, email, IP address, device and advertising IDs</td><td>You, your device</td><td>No</td><td>Yes: advertising ID and IP address, to Meta and TikTok through Singular</td></tr>
+            <tr><td>Commercial information</td><td>Purchase records</td><td>Apple, Google, the Games</td><td>No</td><td>Yes: purchase events (no payment details), to Meta and TikTok</td></tr>
+            <tr><td>Internet or other electronic network activity</td><td>Gameplay progress, in-game events, crash logs, website server logs</td><td>Your device</td><td>No</td><td>Yes: a limited set of in-game events, to Meta and TikTok</td></tr>
+            <tr><td>Approximate location</td><td>City or region derived from IP address. We don’t collect precise location.</td><td>Your device</td><td>No</td><td>Yes: IP address only</td></tr>
+            <tr><td>Inferences</td><td>Player segments, such as skill tier or how often you play</td><td>Our analysis</td><td>No</td><td>No</td></tr>
+            <tr><td>Sensitive personal information</td><td>None. We don’t collect it, or use it to infer anything about you.</td><td>Not applicable</td><td>No</td><td>No</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        We collect this information for the purposes in
+        <a href="#use">How we use data</a> and keep it for the periods in
+        <a href="#retention">Retention</a>. We disclose it for business purposes
+        to the service providers in <a href="#share">Who we share data with</a>.
+        We don’t sell personal information for money. In the last 12 months we
+        have not sold or shared personal information of consumers we know to be
+        under 16.
+      </p>
+      <p><strong>Your rights.</strong> Depending on your state, you have the right to:</p>
+      <ul>
+        <li>Know what personal information we collect, use, and disclose, and get a copy of it</li>
+        <li>Correct inaccurate personal information</li>
+        <li>Delete your personal information</li>
+        <li><strong>Opt out of the “sharing” of your personal information, and of targeted advertising</strong></li>
+        <li>Not be discriminated against for using these rights. We won’t deny you service, charge you a different price, or give you a different quality of game.</li>
+      </ul>
+      <p>
+        We don’t sell personal information, use it for profiling that produces
+        legal or similarly significant effects, or use sensitive personal
+        information. Those opt-out rights therefore don’t apply.
+      </p>
+      <p><strong>How to opt out of sharing and targeted advertising</strong></p>
+      <ul>
+        <li><strong>In the Games:</strong> Turn off <strong>Settings &gt; Privacy &gt; Share data for ad measurement</strong>. If you’re signed in, this applies to your account on every device.</li>
+        <li><strong>By email:</strong> Write to <a href="mailto:support@goodluckmachine.com?subject=Do%20Not%20Sell%20or%20Share">support@goodluckmachine.com</a> with the subject line “Do Not Sell or Share.”</li>
+        <li><strong>Global Privacy Control:</strong> Our website doesn’t share personal information, so a GPC signal sent to it has nothing to switch off. To opt out of sharing in the Games, use the in-game setting above.</li>
+      </ul>
+      <p><strong>Other requests.</strong> Email support@goodluckmachine.com. We verify requests as described in <a href="#choices">Your choices and rights</a>.</p>
+      <p><strong>Authorized agents.</strong> You can use an authorized agent to make a request for you. We’ll ask for proof that you gave the agent permission, and we may ask you to confirm your identity directly with us.</p>
+      <p><strong>Appeals.</strong> If we deny your request, you can appeal by replying to our decision with “Appeal” in the subject line. We’ll respond within the time your state’s law requires. If you’re unhappy with the result, you can contact your state attorney general.</p>
 
       <h2 id="deletion">Deleting your account</h2>
       <p>
@@ -242,10 +369,22 @@
 
       <h2 id="children">Children</h2>
       <p>
-        The Games are not directed to children under 13 (or under 16 in the EEA
-        and UK, or the equivalent minimum age where you live), and we do not
-        knowingly collect personal data from them. If you believe a child has
-        given us personal data, contact us and we will delete it.
+        The Games are not directed to children. You must be at least 13 to play.
+        In the UK, the minimum age is also 13. In the EEA, it’s the age set by
+        your country for consenting to online services, which is between 13 and
+        16.
+      </p>
+      <p>
+        When you first launch a Game, we ask for your age without suggesting an
+        answer. If you’re under the minimum age, you can’t create an account and
+        we don’t collect personal data about you beyond what’s needed to block
+        access. If you’re under 18, we turn off sharing for ad measurement and
+        use privacy-protective defaults.
+      </p>
+      <p>
+        If we learn that we have collected personal data from a child under the
+        minimum age, we delete it. If you believe a child has given us personal
+        data, email <a href="mailto:support@goodluckmachine.com">support@goodluckmachine.com</a>.
       </p>
 
       <h2 id="security">Security</h2>
@@ -263,10 +402,18 @@
       </p>
 
       <h2 id="contact">Contact</h2>
+      <p>Good Luck Machine, LLC is the controller of your personal data.</p>
       <p>
         Good Luck Machine, LLC<br />
-        <a href="mailto:support@goodluckmachine.com">support@goodluckmachine.com</a>
+        2186 E Emerson Ave<br />
+        Salt Lake City, UT 84108<br />
+        United States
       </p>
+      <p>
+        Email: <a href="mailto:support@goodluckmachine.com">support@goodluckmachine.com</a>,
+        for privacy requests and general support
+      </p>
+
     </main>
 
     <footer>
@@ -275,6 +422,7 @@
         <span>Good Luck Machine</span>
       </a>
       <a href="mailto:hello@goodluckmachine.com">hello@goodluckmachine.com</a>
+      <a href="#us-rights">Your Privacy Choices</a>
       <p>© 2026 Good Luck Machine, LLC</p>
     </footer>
   </body>
