@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cellipse cx=%2716%27 cy=%2717%27 rx=%2713%27 ry=%2710%27 fill=%27%23ffd84a%27/%3E%3C/svg%3E" />
+  <title>Sweet Spot: a lemonade stand business sim (prototype)</title>
+  <script type="module" crossorigin src="./assets/index-yUcwSTIN.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DAsPefXG.css">
+</head>
+<body data-style="cozy">
+  <canvas id="gl"></canvas>
+  <div id="labels"></div>
+  <div id="ui">
+    <header id="bar">
+      <div class="menus"><b>FILE</b><b>SHOP</b><b>VIEW</b></div>
+      <div class="brand">Sweet Spot</div>
+      <div class="chip day"><b id="day">DAY 1</b><span id="clock">9:00 AM</span></div>
+      <div class="chip wx" id="wx"></div>
+      <div class="grow"></div>
+      <div class="chip goal" title="Earn this by the end of day 7"><span>GOAL</span><div class="meter"><i id="goalFill"></i></div><b id="goalTxt"></b></div>
+      <div class="chip cash"><span>CASH</span><b id="cash">$20.00</b></div>
+      <div class="speed" id="speed">
+        <button data-sp="0" title="Pause (Space)">❚❚</button><button data-sp="1" title="Normal speed (1)">▶</button><button data-sp="2" title="Fast (2)">▶▶</button><button data-sp="4" title="Fastest (3)">▶▶▶</button>
+      </div>
+      <button id="styleBtn" title="Change the look (V)"></button>
+      <button id="muteBtn" title="Sound (M)">♪</button>
+    </header>
+    <section class="win" id="today">
+      <h3><em>Today</em></h3>
+      <div class="body">
+        <canvas id="chart" width="420" height="200"></canvas>
+        <div class="kv sales"><i></i><span>Sales</span><b id="rev"></b></div>
+        <div class="kv costs"><i></i><span>Costs</span><b id="cost"></b></div>
+        <div class="kv profit"><span>Profit</span><b id="profit"></b></div>
+        <div class="kv small"><span>Cups sold</span><b id="cups"></b></div>
+        <div class="kv small"><span>Walked past</span><b id="lost"></b></div>
+      </div>
+    </section>
+    <section class="win" id="stock">
+      <h3><em>Stock</em></h3>
+      <div class="body" id="stockBody"></div>
+    </section>
+    <section class="win" id="pricebox">
+      <h3><em>Price</em></h3>
+      <div class="body">
+        <div class="stepper big"><button id="pDown" aria-label="Lower price">−</button><b id="price">$1.00</b><button id="pUp" aria-label="Raise price">+</button></div>
+        <div class="kv small"><span>Cost per cup</span><b id="unit"></b></div>
+        <div class="kv small"><span>You keep</span><b id="margin"></b></div>
+        <div class="kv small"><span>Reviews</span><b id="stars"></b></div>
+      </div>
+    </section>
+    <section class="win" id="advisor" hidden></section>
+  </div>
+  <div id="fx"></div>
+  <div id="modal" hidden><div class="sheet" id="sheet"></div></div>
+  <div id="boot"><div><b>Sweet Spot</b><span id="bootTxt">Squeezing lemons…</span></div></div>
+</body>
+</html>
