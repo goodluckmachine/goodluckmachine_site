@@ -255,7 +255,9 @@ h3 {
   font-size: 0.52rem;
 }
 
-.games {
+.about,
+.games,
+.contact {
   position: relative;
   display: grid;
   min-height: 500px;
@@ -263,6 +265,9 @@ h3 {
   align-items: center;
   padding: 3.5rem var(--pad);
   overflow: hidden;
+}
+
+.games {
   background: var(--blue);
   color: var(--paper);
 }
@@ -285,28 +290,19 @@ h3 {
 }
 
 .about {
-  padding: 3.5rem var(--pad);
   background: var(--green);
   color: var(--paper);
 }
 
 .about-copy {
-  margin: 2.75rem 0 3.5rem 20%;
-}
-
-.about-copy h2 {
-  margin-bottom: 0;
+  min-width: 0;
 }
 
 .about-copy p {
-  margin: 1.75rem 0 0;
+  margin: 0;
 }
 
 .contact {
-  display: grid;
-  min-height: 440px;
-  grid-template-columns: 20% 80%;
-  padding: 3.5rem var(--pad);
   background: var(--yellow);
   color: var(--ink);
 }
@@ -417,10 +413,6 @@ footer p {
   .games {
     grid-template-columns: 20% 80%;
   }
-
-  .about-copy {
-    margin-left: 10%;
-  }
 }
 
 @media (max-width: 700px) {
@@ -500,6 +492,7 @@ footer p {
   }
 
   .games,
+  .about,
   .contact {
     display: block;
     min-height: auto;
@@ -507,6 +500,7 @@ footer p {
   }
 
   .games-copy,
+  .about-copy,
   .contact-copy {
     margin-top: 3rem;
   }
@@ -515,23 +509,6 @@ footer p {
   .about-copy h2,
   .contact-copy h2 {
     font-size: clamp(3.6rem, 17vw, 5.7rem);
-  }
-
-  .about {
-    padding: 2.75rem 1rem;
-  }
-
-  .about-copy {
-    display: block;
-    margin: 3rem 0;
-  }
-
-  .about-copy p {
-    margin-top: 1.8rem;
-  }
-
-  .contact {
-    min-height: 470px;
   }
 
   .email-link {
