@@ -15,6 +15,12 @@
   --yellow: #e1b43d;
   --line: 3px solid var(--ink);
   --pad: clamp(1rem, 3.2vw, 3.5rem);
+
+  /* Type scale for running text. Display type (h1/h2) is sized per component. */
+  --text-body: 1rem;
+  --text-small: 0.85rem;
+  --measure: 65ch;
+  --doc-width: 760px;
 }
 
 * {
@@ -38,6 +44,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: "Geist", system-ui, sans-serif;
+  font-size: var(--text-body);
   font-weight: 400;
   line-height: 1.55;
   text-rendering: optimizeLegibility;
@@ -61,7 +68,7 @@ button {
 }
 
 p {
-  max-width: 65ch;
+  max-width: var(--measure);
   line-height: 1.55;
   text-wrap: pretty;
 }
@@ -560,4 +567,57 @@ footer p {
     opacity: 1;
     transform: none;
   }
+}
+
+/* Document pages (support, privacy, delete account) */
+.policy {
+  max-width: var(--doc-width);
+  margin: 0 auto;
+  padding: clamp(5rem, 12vw, 9rem) var(--pad) clamp(2rem, 6vw, 5rem);
+}
+
+.policy h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  line-height: 1.05;
+}
+
+.policy h2 {
+  margin: 2.5rem 0 0.5rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+}
+
+.policy p,
+.policy li {
+  max-width: var(--measure);
+}
+
+.policy .updated {
+  font-size: var(--text-small);
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.policy table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.policy th,
+.policy td {
+  padding: 0.6rem 0.75rem;
+  border: 2px solid var(--ink);
+  text-align: left;
+  vertical-align: top;
+}
+
+.policy th {
+  background: rgba(36, 36, 42, 0.08);
 }
