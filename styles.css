@@ -357,7 +357,9 @@ h3 {
 
 footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
   padding: 1.6rem var(--pad);
   background: var(--ink);
   color: var(--paper);
@@ -387,6 +389,13 @@ footer a {
 footer p {
   margin: 0;
   text-align: right;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1.4rem;
 }
 
 .reveal {
@@ -539,6 +548,10 @@ footer p {
 
   footer p {
     text-align: left;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
   }
 }
 
